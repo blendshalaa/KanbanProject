@@ -1,0 +1,65 @@
+body {
+  font-family: sans-serif;
+  margin: 20px;
+}
+
+.kanban-board {
+  display: flex;
+  justify-content: space-between;
+}
+
+.column {
+  width: 300px;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.column h2 {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.card {
+  margin-bottom: 10px;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.card .edit-card, .card .delete-card {
+  display: none; /* Initially hide edit and delete buttons */
+}
+
+.card:hover .edit-card, .card:hover .delete-card {
+  display: inline-block; /* Show buttons on hover */
+}
+
+.add-card, .edit-card, .delete-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.add-card {
+  background-color: #4CAF50;
+  color: #fff;
+}
+
+.edit-card {
+  background-color: #FF9800;
+  color: #fff;
+}
+
+.delete-card {
+  background-color: #F44336;
+  color: #fff;
+}
