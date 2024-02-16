@@ -6,6 +6,8 @@ function ToDo() {
   const [todos, setTodos] = useState([]);
   const [loading, setIsLoading] = useState(false);
   const[newTask,setNewTask]=useState('');
+  const[isEditing,setIsEditing]=useState(false);
+  const[editingTaskId,setEditingTaskId]=useState(null)
 
   useEffect(() => {
     setIsLoading(true); // Set loading to true before fetching
@@ -22,6 +24,7 @@ function ToDo() {
     console.log('Task with ID', id, 'deleted locally'); // Log with correct string formatting
   };
 
+
  function handleAddTask(e){
     e.preventDefault();
     if(!newTask.trim()){
@@ -34,6 +37,14 @@ function ToDo() {
     };
     setTodos([...todos,newTodo]);
     setNewTask('')
+ }
+
+ function editTask(){
+
+  
+
+
+
  }
 
   return (
